@@ -24,3 +24,8 @@ Route::get('listado_comprobantes/{user_ruc}:',  [
   'uses' => 'ComprobantesController@listado_comprobantes',
   'as' => 'listado_comprobantes'
 ]);
+
+Route::get('obtener_xml/{id_comprobante}', [
+   'uses' => 'ComprobantesController@obtener_xml',
+   'as' => 'obtener_xml'
+]);

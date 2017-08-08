@@ -19,7 +19,9 @@
     use \App\Http\Controllers\ComprobantesController;
  ?>
     <div class="container-fluid">
-        <h1 class="text-center">Detalle de documentos electrónicos</h1>
+        <h1 class="text-center">EMPRESA S.A.</h1>
+        <h2 class="text-center">Logo Empresa</h2>
+        <h3 class="text-center">Detalle de documentos electrónicos</h3>
         <table class="table table-responsive table-stripped table-hover" id="listado_comprobantes">
             <thead>
                 <tr>
@@ -42,8 +44,16 @@
                         <td>{{ $comprobante->CA_MONTO }}</td>
                         <td>{{ $comprobante->CA_COD_ACC }}</td>
                         <td>{{ $comprobante->CA_AUT_SRI }}</td>
-                        <td></td>
-                        <td></td>
+                        <td class="text-center">
+                            <a href="{{ url('obtener_xml/'.$comprobante->ID_CAB) }}">
+                                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

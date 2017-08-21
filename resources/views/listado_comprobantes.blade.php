@@ -50,9 +50,11 @@
                             </a>
                         </td>
                         <td class="text-center">
-                            <a href="#">
-                                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
-                            </a>
+                            @if (strlen($comprobante->XM_PDF)>1)
+                                <a href="{{ url('obtener_pdf/'.$comprobante->ID_CAB) }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                                </a>
+                            @endif
                         </td>
                     </tr>
                 @endforeach

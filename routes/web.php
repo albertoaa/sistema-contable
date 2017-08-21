@@ -29,3 +29,8 @@ Route::get('obtener_xml/{id_comprobante}', [
    'uses' => 'ComprobantesController@obtener_xml',
    'as' => 'obtener_xml'
 ]);
+
+Route::get('obtener_pdf/{id_comprobante}', [
+    'uses' => 'ComprobantesController@obtener_pdf',
+    'as' => 'obtener_pdf'
+]);
